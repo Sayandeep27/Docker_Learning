@@ -1,0 +1,53 @@
+docker --version
+docker version
+docker info
+
+docker images
+docker pull <image>
+docker build -t <name>:<tag> .
+docker rmi <image>
+docker tag <image> <repo>/<name>:<tag>
+docker push <repo>/<name>:<tag>
+
+docker ps
+docker ps -a
+docker run <image>
+docker run -it <image> bash
+docker start <container>
+docker stop <container>
+docker restart <container>
+docker rm <container>
+docker exec -it <container> <command>
+docker logs <container>
+docker inspect <container>
+
+docker network ls
+docker network create <name>
+docker network rm <name>
+docker network inspect <name>
+docker network connect <network> <container>
+docker network disconnect <network> <container>
+
+docker volume ls
+docker volume create <name>
+docker volume rm <name>
+docker volume inspect <name>
+
+docker-compose up
+docker-compose up -d
+docker-compose down
+docker-compose ps
+docker-compose logs
+docker-compose build
+
+docker system df
+docker system prune
+docker image prune
+docker container prune
+docker volume prune
+
+docker save -o <file>.tar <image>
+docker load -i <file>.tar
+docker export <container> > file.tar
+docker import <file>.tar <image>
+docker cp <container>:<path> <local-path>
